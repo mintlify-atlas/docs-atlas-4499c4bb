@@ -1,0 +1,150 @@
+{
+  "projectType": "sdk-library",
+  "projectName": "CE C/C++ Toolchain",
+  "projectDescription": "A complete C/C++ development toolchain and library ecosystem for programming the TI-84 Plus CE and TI-83 Premium CE calculators, targeting the eZ80 processor.",
+  "theme": "aspen",
+  "primaryColor": "#416e79",
+  "lightColor": "#a8bec2",
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Getting Started",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "introduction",
+              "hardware",
+              "faq"
+            ]
+          },
+          {
+            "group": "Setup",
+            "pages": [
+              "getting-started",
+              "ides",
+              "makefile-options"
+            ]
+          },
+          {
+            "group": "Development",
+            "pages": [
+              "debugging",
+              "printf",
+              "fileio",
+              "asm"
+            ]
+          },
+          {
+            "group": "Resources",
+            "pages": [
+              "git",
+              "coding-guidelines",
+              "contributing"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Libraries",
+        "groups": [
+          {
+            "group": "Common Libraries",
+            "pages": [
+              "libraries/index",
+              "libraries/graphx",
+              "libraries/fontlibc",
+              "libraries/fileioc",
+              "libraries/keypadc",
+              "libraries/lcddrvce",
+              "libraries/libload"
+            ]
+          },
+          {
+            "group": "USB Libraries",
+            "pages": [
+              "libraries/usbdrvce",
+              "libraries/srldrvce",
+              "libraries/msddrvce",
+              "libraries/fatdrvce"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Miscellaneous Headers",
+            "pages": [
+              "headers/index",
+              "headers/compression",
+              "headers/intce",
+              "headers/tice"
+            ]
+          },
+          {
+            "group": "System Headers",
+            "pages": [
+              "headers/sys/index",
+              "headers/sys/lcd",
+              "headers/sys/rtc",
+              "headers/sys/timers",
+              "headers/sys/power",
+              "headers/sys/util",
+              "headers/sys/basicusb"
+            ]
+          },
+          {
+            "group": "TI Headers",
+            "pages": [
+              "headers/ti/index",
+              "headers/ti/vars",
+              "headers/ti/getkey",
+              "headers/ti/getcsc",
+              "headers/ti/screen",
+              "headers/ti/ui",
+              "headers/ti/real",
+              "headers/ti/sprintf",
+              "headers/ti/error",
+              "headers/ti/flags",
+              "headers/ti/info",
+              "headers/ti/tokens",
+              "headers/ti/python"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Full C/C++ (LLVM/Clang v17) support targeting the eZ80 processor in the TI-84 Plus CE",
+    "Rich graphics library (graphx) with sprite, tilemap, shape, and palette support",
+    "File I/O library (fileioc) for reading and writing AppVars and programs",
+    "Font rendering library (fontlibc) for custom TrueType-style fonts",
+    "Keypad input library (keypadc) for polling and scanning the calculator keyboard",
+    "USB stack (usbdrvce) with mass storage, serial, and FAT filesystem drivers",
+    "Dynamic library linking at runtime via LibLoad to minimize program size",
+    "Built-in debugging support with dbg_printf and CEmu emulator integration",
+    "Cross-platform toolchain builds for Windows, Linux, and macOS",
+    "GNU Assembler (GAS) support for mixed C/C++ and eZ80 assembly projects"
+  ],
+  "publicApiSurface": [
+    "graphx.h — graphics: gfx_Begin, gfx_End, gfx_Sprite, gfx_FillScreen, gfx_SetDrawBuffer, gfx_BlitBuffer",
+    "fontlibc.h — fonts: fontlib_SetFont, fontlib_DrawString, fontlib_GetStringWidth",
+    "fileioc.h — file I/O: ti_Open, ti_Close, ti_Read, ti_Write, ti_GetVar",
+    "keypadc.h — keypad: kb_Scan, kb_Data, kb_IsDown",
+    "usbdrvce.h — USB: usb_Init, usb_Cleanup, usb_HandleEvents",
+    "fatdrvce.h — FAT filesystem: fat_Open, fat_Close, fat_Read, fat_Write",
+    "msddrvce.h — mass storage: msd_Open, msd_Close, msd_Read, msd_Write",
+    "lcddrvce.h — LCD driver: lcd_Init, lcd_Cleanup",
+    "libload.h — dynamic linking: libload_GetLib",
+    "debug.h — debugging: dbg_printf, dbg_ClearConsole",
+    "tice.h — core TI OS: os_PutStrFull, os_GetStringInput, boot_GetDate",
+    "compression.h — data compression: zx7_Decompress",
+    "ti/vars.h — variable access: os_GetAppVarData, os_CreateAppVar",
+    "ti/getkey.h — OS key input: os_GetKey, os_GetCSC",
+    "ti/real.h — TI floating-point: os_FloatToReal, os_RealToFloat"
+  ]
+}
